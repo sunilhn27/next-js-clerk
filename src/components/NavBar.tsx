@@ -12,11 +12,13 @@ function NavBar(): JSX.Element {
     <section className="bg-[#FF6B81]">
       <div className="flex justify-center items-center w-full ">
         <nav className="text-white flex items-center md:gap-x-48 2xl:gap-60 md:py-4 ">
-          <Image src={Logo} alt="logo" className="w-[9.9rem] h-[2.2rem]" />
+          <Link href={"/"}>
+            <Image src={Logo} alt="logo" className="w-[9.9rem] h-[2.2rem]" />
+          </Link>
           <div className="flex gap-6 font-bold">
             <Link href={"/"}>Home</Link>
             <Link href={""}>Features</Link>
-            <Link href={""}>Overview</Link>
+            <Link href={"/pricing"}>Pricing</Link>
             <Link href={"/profile"}>Profile</Link>
             <Link href={""}>Team</Link>
             <Link href={""}>Blog</Link>
