@@ -17,7 +17,7 @@ function NavBar(): JSX.Element {
           </Link>
           <div className="flex gap-6 font-bold">
             <Link href={"/"}>Home</Link>
-            <Link href={""}>Features</Link>
+            <Link href={"/dashboard"}>Dashboard</Link>
             <Link href={"/pricing"}>Pricing</Link>
             <Link href={"/profile"}>Profile</Link>
             <Link href={""}>Team</Link>
