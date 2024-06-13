@@ -2,22 +2,32 @@
 import React from "react";
 import Tick from "@/asserts/icons/Tick.png";
 import Image from "next/image";
+import { setRole } from "@/app/pricing/_actions";
 
 interface PricingList {
   title: string;
   para: string;
   price: string;
   user: string;
+  role?: () => void; // Correct the type here
 }
 
-const Pricings: React.FC<PricingList> = ({ title, para, price, user }) => {
+const Pricings: React.FC<PricingList> = ({
+  title,
+  para,
+  price,
+  user,
+  role,
+}) => {
   return (
     <section className="w-[20rem] h-[32rem] border-2">
       <div className="flex flex-col p-6 space-y-3">
         <h1 className="font-semibold">{title}</h1>
         <p className="text-gray-400">{para}</p>
         <h2 className="text-[2rem] font-bold">{price}</h2>
-        <button className="text-white w-[15.5rem] h-[2.7rem] bg-black rounded-lg ">
+        <button
+          className="text-white w-[15.5rem] h-[2.7rem] bg-black rounded-lg "
+        >
           {user}
         </button>
         <hr className="" />
@@ -72,29 +82,25 @@ function Pricing(): JSX.Element {
         <div className="grid grid-cols-4 gap-5">
           <Pricings
             title="Hobby"
-            para="All the basics for starting a new
-            business"
+            para="All the basics for starting a new business"
             price="$12/mo"
             user="Buy Basics"
           />
           <Pricings
             title="Freelancer"
-            para="All the basics for starting a new
-            business"
+            para="All the basics for starting a new business"
             price="$24/mo"
             user="Buy Standard"
           />
           <Pricings
             title="Startup"
-            para="All the basics for starting a new
-            business"
+            para="All the basics for starting a new business"
             price="$32/mo"
             user="Buy Premium"
           />
           <Pricings
             title="Enterprise"
-            para="All the basics for starting a new
-            business"
+            para="All the basics for starting a new business"
             price="$48/mo"
             user="Buy Enterprise"
           />
