@@ -3,7 +3,7 @@ import { SearchUsers } from "../pricing/_search-user";
 import { clerkClient } from "@clerk/nextjs/server";
 import { checkRole } from "../../../utils/roles";
 import { redirect } from "next/navigation";
-import { setRole } from "../pricing/_actions";
+import { setRole } from "../../serveractions/_actions";
 
 export default async function AdminDashboard(params: {
   searchParams: { search?: string };
