@@ -2,7 +2,6 @@
 import React from "react";
 import Tick from "@/asserts/icons/Tick.png";
 import Image from "next/image";
-import { setRole } from "@/app/pricing/_actions";
 
 interface PricingList {
   title: string;
