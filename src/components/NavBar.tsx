@@ -2,9 +2,8 @@ import React from "react";
 import Logo from "@/asserts/Appvilla.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
-import { dark, neobrutalism } from "@clerk/themes";
 
 function NavBar(): JSX.Element {
   const { userId } = auth();
@@ -19,10 +18,10 @@ function NavBar(): JSX.Element {
             <Link href={"/"}>Home</Link>
             <Link href={"/dashboard"}>Dashboard</Link>
             <Link href={"/pricing"}>Pricing</Link>
-            <Link href={"/profile"}>Profile</Link>
-            <Link href={""}>Team</Link>
-            <Link href={""}>Blog</Link>
-            <Link href={""}>Contact</Link>
+            <Link href={"/basic"}>Basic</Link>
+            <Link href={"/premium"}>Premium</Link>
+            <Link href={"/standard"}>Standard</Link>
+            <Link href={"/enterprise"}>EnterPrise</Link>
             {userId ? (
               <div className="text-white">
                 <UserButton
